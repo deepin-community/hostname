@@ -43,7 +43,7 @@
 #include <ctype.h>
 #include <err.h>
 
-#define VERSION "3.23"
+#define VERSION "3.25"
 
 enum type_t { DEFAULT, DNS, FQDN, SHORT, ALIAS, IP, NIS, NIS_DEF, ALL_FQDNS, ALL_IPS };
 
@@ -262,12 +262,15 @@ show_name(enum type_t type)
 	switch(type)
 	{
 		case DEFAULT: 
-			printf("%s\n", localhost());
+			p=localhost();
+			printf("%s\n", p);
+			free(p);
 			break;
 		case SHORT:
 			p = localhost();
 			*(strchrnul(p, '.')) = '\0';
 			printf("%s\n", p);
+			free(p);
 			break;
 		case NIS:
 			printf("%s\n", localdomain());

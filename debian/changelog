@@ -1,3 +1,42 @@
+hostname (3.25) unstable; urgency=medium
+
+  * Removed old rule that moved file from /usr/bin to /bin. (Closes: #1056978)
+
+ -- Michael Meskes <meskes@debian.org>  Fri, 11 Oct 2024 08:12:34 +0200
+
+hostname (3.24) unstable; urgency=medium
+
+  [ Gioele Barabucci ]
+  * d/control: Add VCS URLs (Closes: #1050091)
+  * Makefile: Adopt GNU/debhelper conventions
+  * d/rules: Simplify using debhelper 13 (Closes: #1050093)
+  * d/rules: Extract program version using sed
+  * d/control: Update standards version to 4.6.2, no changes needed
+  * d/control: Specify Rules-Requires-Root: no
+
+  [ binlingyu ]
+  * Fix memory leak
+
+  [ lingyu bin ]
+  * Update .gitlab-ci.yml file
+
+  [ Michael Meskes ]
+  * Fixed VCS information
+  * Enable build with ubuntu suffixes.
+    Thanks to Matthias Klose <doko@ubuntu.com> (Closes: #995889)
+  * Update standards version to 4.7.0, no changes needed
+  * Release 3.24
+
+ -- Michael Meskes <meskes@debian.org>  Wed, 09 Oct 2024 15:57:37 +0200
+
+hostname (3.23+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Convert d/copyright to machine-readable format. (Closes: #1013131)
+  * Upgrade to 3.0 source format. (Closes: #1007059)
+
+ -- Bastian Germann <bage@debian.org>  Mon, 19 Dec 2022 14:33:11 +0100
+
 hostname (3.23) unstable; urgency=medium
 
   * Increase buffer size for all FQDNs to NI_MAXHOST as suggested by manpage.
